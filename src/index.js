@@ -18,6 +18,15 @@ const theme = createTheme({
       primary: "#112211",
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 550,
+      md: 768,
+      lg: 950,
+      xl: 1200,
+    },
+  },
   salmon: {
     main: "#FF8682",
   },

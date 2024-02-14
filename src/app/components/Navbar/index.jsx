@@ -23,17 +23,19 @@ const Navbar = () => {
               alignItems: "center",
             }}
           >
-            <Flight sx={{ mr: 1, color: "#458f75", fontSize: 29 }} />
+            <Flight
+              sx={{ mr: 1, color: "#458f75", fontSize: { xs: 24, sm: 29 } }}
+            />
             <Typography
               variant="h6"
               noWrap
               component="a"
-              fontSize={28}
+              fontSize={{ xs: 23, sm: 28 }}
               sx={{
                 mr: 2,
                 fontFamily: "monospace",
                 fontWeight: 700,
-                letterSpacing: ".3rem",
+                letterSpacing: { xs: ".2rem", sm: ".3rem" },
                 color: "inherit",
                 textDecoration: "none",
               }}

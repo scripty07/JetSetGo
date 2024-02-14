@@ -65,21 +65,48 @@ const FlightResults = () => {
     <Box>
       <Box ml={2}>
         <Box display="flex" justifyContent="space-between" alignItems="center">
-          <Typography component="p">
+          <Typography component="p" fontSize={{ xs: 12, lg: 16 }}>
             Showing
-            <Typography component="span" color="salmon">
+            <Typography
+              component="span"
+              color="salmon"
+              fontSize={{ xs: 12, lg: 16 }}
+            >
               {` ${flightResults.length} `}
             </Typography>
             places
           </Typography>
           <Box display="flex" alignItems="center">
-            <Typography fontSize={12} fontWeight={400}>
+            <Typography fontSize={{ xs: 10, lg: 12 }} fontWeight={400}>
               Sort by
             </Typography>
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-              <Select value={sortFilter} onChange={handleSortFilterChange}>
-                <MenuItem value={1}>Economic</MenuItem>
-                <MenuItem value={2}>Expensive</MenuItem>
+            <FormControl
+              variant="standard"
+              sx={{ m: 1, minWidth: { xs: 90, lg: 120 } }}
+            >
+              <Select
+                value={sortFilter}
+                sx={{
+                  fontSize: { xs: 12, lg: 16 },
+                }}
+                onChange={handleSortFilterChange}
+              >
+                <MenuItem
+                  value={1}
+                  sx={{
+                    fontSize: { xs: 12, lg: 16 },
+                  }}
+                >
+                  Economic
+                </MenuItem>
+                <MenuItem
+                  value={2}
+                  sx={{
+                    fontSize: { xs: 12, lg: 16 },
+                  }}
+                >
+                  Expensive
+                </MenuItem>
               </Select>
             </FormControl>
           </Box>

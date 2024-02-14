@@ -38,14 +38,27 @@ export default function FilterGroup() {
   return (
     <Container
       maxWidth="xl"
-      sx={{ backgroundColor: "white", position: "sticky", top: 0, zIndex: 100 }}
+      sx={{
+        backgroundColor: "white",
+        position: { xs: "static", lg: "sticky" },
+        top: 0,
+        zIndex: 100,
+      }}
     >
       <Box
         sx={{
           my: 5,
           padding: "1.5rem 1rem",
           display: "flex",
-          justifyContent: "space-between",
+          flexDirection: {
+            xs: "column",
+            sm: "row",
+          },
+          flexWrap: {
+            sm: "wrap",
+            lg: "nowrap",
+          },
+          gap: 2,
           boxShadow: "0 0 20px #ddd",
           borderRadius: 5,
         }}
@@ -53,7 +66,7 @@ export default function FilterGroup() {
         <Autocomplete
           options={fromCity}
           sx={{
-            width: 200,
+            width: { xs: "100%", sm: 200 },
             display: "inline-block",
             mr: 1,
           }}
@@ -62,25 +75,44 @@ export default function FilterGroup() {
         <Autocomplete
           disablePortal
           options={toCity}
-          sx={{ width: 200, display: "inline-block", mr: 1 }}
+          sx={{
+            width: { xs: "100%", sm: 200 },
+            display: "inline-block",
+            mr: 1,
+          }}
           renderInput={(params) => <TextField {...params} label="To" />}
         />
         <Autocomplete
           options={tripType}
-          sx={{ width: 200, display: "inline-block", mr: 1 }}
+          sx={{
+            width: { xs: "100%", sm: 200 },
+            display: "inline-block",
+            mr: 1,
+          }}
           renderInput={(params) => <TextField {...params} label="Trip" />}
         />
-        <DatePicker label="Depart" sx={{ mr: 1, width: 200 }} />
+        <DatePicker
+          label="Depart"
+          sx={{ mr: 1, width: { xs: "100%", sm: 200 } }}
+        />
         <Autocomplete
           disablePortal
           options={passengerCount}
-          sx={{ width: 200, display: "inline-block", mr: 1 }}
+          sx={{
+            width: { xs: "100%", sm: 200 },
+            display: "inline-block",
+            mr: 1,
+          }}
           renderInput={(params) => <TextField {...params} label="Passenger" />}
         />
         <Autocomplete
           disablePortal
           options={classType}
-          sx={{ width: 200, display: "inline-block", mr: 1 }}
+          sx={{
+            width: { xs: "100%", sm: 200 },
+            display: "inline-block",
+            mr: 1,
+          }}
           renderInput={(params) => <TextField {...params} label="Class" />}
         />
         <Button

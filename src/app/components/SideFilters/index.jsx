@@ -31,9 +31,13 @@ const SideFilters = () => {
   };
 
   return (
-    <Box borderRight="1px solid #eee" pr={2}>
+    <Box borderRight={{ md: "1px solid #eee" }} pr={2}>
       <Box sx={{ display: "flex", justifyContent: "space-between", py: 2 }}>
-        <Typography fontWeight={800} fontFamily={"sans-serif"} fontSize={18}>
+        <Typography
+          fontWeight={800}
+          fontFamily={"sans-serif"}
+          fontSize={{ xs: 15, lg: 18 }}
+        >
           Filters
         </Typography>
         <Button
@@ -42,7 +46,7 @@ const SideFilters = () => {
           onClick={resetFilters}
         >
           <Typography
-            fontSize={16}
+            fontSize={{ xs: 13, lg: 16 }}
             fontWeight={500}
             fontFamily={"sans-serif"}
             color={"primary"}
@@ -61,7 +65,7 @@ const SideFilters = () => {
           id="panel1-header"
           sx={{ px: 0, border: "none", boxShadow: "none" }}
         >
-          <Typography fontSize={16} fontWeight={500}>
+          <Typography fontSize={{ xs: 13, lg: 16 }} fontWeight={500}>
             Price
           </Typography>
         </AccordionSummary>
@@ -101,7 +105,7 @@ const SideFilters = () => {
           id="panel1-header"
           sx={{ px: 0, border: "none", boxShadow: "none" }}
         >
-          <Typography fontSize={16} fontWeight={500}>
+          <Typography fontSize={{ xs: 13, lg: 16 }} fontWeight={500}>
             Rating
           </Typography>
         </AccordionSummary>
@@ -110,8 +114,10 @@ const SideFilters = () => {
             sx={{
               width: "90%",
               display: "flex",
+              gap: 1,
+              flexWrap: "wrap",
               m: "auto",
-              justifyContent: "space-between",
+              justifyContent: "normal",
             }}
           >
             <Button
@@ -130,7 +136,7 @@ const SideFilters = () => {
                 }));
               }}
             >
-              0+
+              <Typography fontSize={{ xs: 13, lg: 16 }}>0+</Typography>
             </Button>
             <Button
               variant={
@@ -148,7 +154,7 @@ const SideFilters = () => {
                 }));
               }}
             >
-              1+
+              <Typography fontSize={{ xs: 13, lg: 16 }}>1+</Typography>
             </Button>
             <Button
               variant={
@@ -166,7 +172,7 @@ const SideFilters = () => {
                 }));
               }}
             >
-              2+
+              <Typography fontSize={{ xs: 13, lg: 16 }}>2+</Typography>
             </Button>
             <Button
               variant={
@@ -184,7 +190,7 @@ const SideFilters = () => {
                 }));
               }}
             >
-              3+
+              <Typography fontSize={{ xs: 13, lg: 16 }}>3+</Typography>
             </Button>
             <Button
               variant={
@@ -202,7 +208,7 @@ const SideFilters = () => {
                 }));
               }}
             >
-              4+
+              <Typography fontSize={{ xs: 13, lg: 16 }}>4+</Typography>
             </Button>
           </Box>
         </AccordionDetails>
@@ -217,7 +223,7 @@ const SideFilters = () => {
           id="panel1-header"
           sx={{ px: 0, border: "none", boxShadow: "none" }}
         >
-          <Typography fontSize={16} fontWeight={500}>
+          <Typography fontSize={{ xs: 13, lg: 16 }} fontWeight={500}>
             Airlines
           </Typography>
         </AccordionSummary>
@@ -239,7 +245,11 @@ const SideFilters = () => {
                     }
                   />
                 }
-                label="SpiceJet"
+                label={
+                  <Typography fontSize={{ xs: 13, lg: 16 }}>
+                    SpiceJet
+                  </Typography>
+                }
               />
               <FormControlLabel
                 control={
@@ -256,7 +266,11 @@ const SideFilters = () => {
                     }
                   />
                 }
-                label="Air India"
+                label={
+                  <Typography fontSize={{ xs: 13, lg: 16 }}>
+                    Air India
+                  </Typography>
+                }
               />
               <FormControlLabel
                 control={
@@ -273,7 +287,9 @@ const SideFilters = () => {
                     }
                   />
                 }
-                label="Indigo"
+                label={
+                  <Typography fontSize={{ xs: 13, lg: 16 }}>Indigo</Typography>
+                }
               />
               <FormControlLabel
                 control={
@@ -290,7 +306,12 @@ const SideFilters = () => {
                     }}
                   />
                 }
-                label="Vistara"
+                sx={{
+                  fontSize: { xs: 13, lg: 16 },
+                }}
+                label={
+                  <Typography fontSize={{ xs: 13, lg: 16 }}>Vistara</Typography>
+                }
               />
             </FormGroup>
           </Box>
