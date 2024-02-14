@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Demo
+
+Live demo for this app - https://jetsetgo-sachin.netlify.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
